@@ -48,11 +48,11 @@
 4、使用KafkaUtil.createDirectStream取出topics里面的数据放到一个DStream里面
 
     ssc ：一个streamingContext<br>
-    
+    <br>
     PreferConsistent ：import org.apache.spark.streaming.kafka010.LocationStrategies.PreferConsistent<br>
-    
+    <br>
     Subscribe[String, String](topicSet, kafkaParams)：import org.apache.spark.streaming.kafka010.ConsumerStrategies.Subscribe<br>
-    
+    <br>
 5、对DStream的处理（具体看代码，我也是从官网拷下来，还没看呢）
 
 
