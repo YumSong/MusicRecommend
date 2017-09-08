@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="musicrecommend:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/musicrecommend_jar</output-path>
+    <root id="archive" name="musicrecommend.jar">
+      <element id="module-output" name="musicrecommend" />
+    </root>
+  </artifact>
+</component>
