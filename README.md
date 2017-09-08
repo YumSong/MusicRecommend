@@ -22,8 +22,8 @@
 3、创建producer -----new Producer【String，String】（ProducerConfig）
 
 4、producer.send（new KeyedMessage[String,String](topics.toArray.apply(0),event.toString()）<br>
-   keyedMessage -------一个消息类（topics，message）<br>
-   topics       -------可以一个通道，也可以多个<br>
+&nbsp;&nbsp;keyedMessage -------一个消息类（topics，message）<br>
+&nbsp;&nbsp;topics       -------可以一个通道，也可以多个<br>
    
 （二）spark streaming与kafka对接接收来自kafka的数据
 
