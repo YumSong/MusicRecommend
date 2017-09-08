@@ -31,5 +31,28 @@
 
 2、创建一个topicSet（存放要从哪个topic拿数据）
 
+3、配置一个kafkaParam
+    
+    &nbsp;&nbsp;&nbsp;&nbsp;"bootstrap.servers" -> "datanode1:9092,datanode2:9092,datanode3:9092",
+    
+    &nbsp;&nbsp;&nbsp;&nbsp;"key.deserializer" -> classOf[StringDeserializer],
+    
+    &nbsp;&nbsp;&nbsp;&nbsp;"value.deserializer" -> classOf[StringDeserializer],
+    
+    &nbsp;&nbsp;&nbsp;&nbsp;"group.id" -> "getDataFKafka",
+    
+    &nbsp;&nbsp;&nbsp;&nbsp;"auto.offset.reset" -> "latest",
+    
+    &nbsp;&nbsp;&nbsp;&nbsp;"enable.auto.commit" -> (false: java.lang.Boolean)
+
+4、使用KafkaUtil.createDirectStream取出topics里面的数据放到一个DStream里面
+
+    ssc ：一个streamingContext
+    
+    PreferConsistent ：import org.apache.spark.streaming.kafka010.LocationStrategies.PreferConsistent
+    
+    Subscribe[String, String](topicSet, kafkaParams)：import org.apache.spark.streaming.kafka010.ConsumerStrategies.Subscribe
+    
+5、对DStream的处理（具体看代码，我也是从官网拷下来，还没看呢）
 
 
