@@ -1,5 +1,6 @@
 # MusicRecommend
 一、基于SparkMLlib的音乐推荐示例
+
 1、数据清洗
 
 2、将rdd里面是数据从string转换成Rating(userID,productId,count)
