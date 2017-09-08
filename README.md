@@ -55,4 +55,14 @@
     <br>
 5、对DStream的处理（具体看代码，我也是从官网拷下来，还没看呢）
 
+(三)数据持久化，将数据存入mongodb
 
+1、创建mongoClient（“ip”，port）
+
+2、创建db = mongoClient（“database”） 具体连接到哪个数据库
+
+3、创建collection = db("collection") 具体连接到哪个collection（相当于mysql的表的句柄）
+
+4、创建mongoObject 数据以键值对的形式放入这个对象
+
+5、collection.CRUD(mongoObject)
